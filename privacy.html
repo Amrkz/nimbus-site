@@ -2,72 +2,97 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Privacy policy for Nimbus, a Mac download manager. Nimbus does not collect personal data. Downloads stay on your Mac.">
+  <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#101114" media="(prefers-color-scheme: dark)">
   <title>Privacy Policy — Nimbus</title>
-  <style>
-:root { color-scheme: light dark; }
-body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; line-height: 1.55; max-width: 40rem; margin: 2rem auto; padding: 0 1.25rem; color: #1d1d1f; }
-@media (prefers-color-scheme: dark) { body { color: #f5f5f7; } }
-h1 { font-size: 1.8rem; margin-bottom: 0.25rem; }
-h2 { font-size: 1.15rem; margin-top: 1.8rem; }
-p, li { font-size: 1rem; }
-.muted { color: #6e6e73; font-size: 0.95rem; }
-a { color: #0071e3; }
-footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #d2d2d7; font-size: 0.9rem; }
-nav a { margin-right: 1rem; }
-</style>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav>
-    <a href="index.html">Nimbus</a>
-    <a href="support.html">Support</a>
-    <a href="privacy.html">Privacy</a>
-  </nav>
-  <h1>Privacy Policy</h1>
-  <p class="muted">Last updated: 13 November 2026</p>
-  <p>Nimbus is a download manager for macOS, published by Amr Ali. This policy describes what the app does — and does not do — with your information.</p>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="index.html">
+        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <rect width="32" height="32" rx="8" fill="#0a6bc4"/>
+          <path fill="#ffffff" d="M8.6 21.4h14.1a4.55 4.55 0 0 0 .4-9.08 5.7 5.7 0 0 0-10.9-1.35A3.85 3.85 0 0 0 8.6 21.4z"/>
+        </svg>
+        <span>Nimbus</span>
+      </a>
+      <nav aria-label="Pages">
+        <ul>
+          <li><a href="index.html">Nimbus</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="privacy.html" aria-current="page">Privacy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="content" tabindex="-1">
+    <h1>Privacy Policy</h1>
+    <p class="muted">Last updated: 14 November 2026</p>
+    <p>Nimbus is a download manager for macOS, published by Amr Ali. This policy describes what the app does — and does not do — with your information.</p>
 
-  <h2>Data not collected</h2>
-  <p>Nimbus does not collect, store on a server, sell, share, or otherwise process personal data. There is no developer backend, no user account, no mailing list, no advertising, no analytics, no tracking, and no third-party crash or telemetry service.</p>
-  <p>In App Store terms: Data Not Collected.</p>
+    <h2>Data not collected</h2>
+    <p>Nimbus does not collect, store on a server, sell, share, or otherwise process personal data. There is no developer backend, no user account, no mailing list, no advertising, no analytics, no tracking, and no third-party crash or telemetry service.</p>
+    <p>In App Store terms: Data Not Collected.</p>
 
-  <h2>Downloads stay between you and the servers you choose</h2>
-  <p>When you add a link, Nimbus fetches that file directly from the HTTP or HTTPS address you provided (or that you sent from the Safari extension or the Share extension) and saves it on your Mac. Files and URLs are not uploaded to the developer. Nimbus does not maintain a catalogue of sites or media, and it does not route your downloads through a developer-operated proxy.</p>
-  <p>You choose where each file is saved: your Downloads folder, or another folder you pick. Access to folders outside Downloads is granted only when you select them. Nimbus may keep a security-scoped bookmark on your Mac so it can return to a folder you already approved.</p>
+    <h2>Downloads stay between you and the servers you choose</h2>
+    <p>When you add a link, Nimbus fetches that file directly from the HTTP or HTTPS address you provided (or that you sent from the Safari extension or the Share extension) and saves it on your Mac. Files and URLs are not uploaded to the developer. Nimbus does not maintain a catalogue of sites or media, and it does not route your downloads through a developer-operated proxy.</p>
+    <p>You choose where each file is saved: your Downloads folder, or another folder you pick. Access to folders outside Downloads is granted only when you select them. Nimbus may keep a security-scoped bookmark on your Mac so it can return to a folder you already approved.</p>
 
-  <h2>What is stored locally</h2>
-  <p>Nimbus may keep a small amount of data on your Mac so the app can work as designed, for example:</p>
-  <ul>
-    <li>Your settings, queues, scheduler times, and daily-quota preferences.</li>
-    <li>Resume state for downloads that are in progress or paused, including the destination path and transfer progress.</li>
-    <li>A local record of whether Nimbus Pro has been unlocked on this Mac, after a purchase or a restore through the App Store.</li>
-  </ul>
-  <p>This information stays on your device. It is not transmitted to the developer.</p>
+    <h2>What is stored locally</h2>
+    <p>Nimbus may keep a small amount of data on your Mac so the app can work as designed, for example:</p>
+    <ul>
+      <li>Your settings, queues, scheduler times, and daily-quota preferences.</li>
+      <li>Resume state for downloads that are in progress or paused, including the destination path and transfer progress.</li>
+      <li>A local record of whether Nimbus Pro has been unlocked on this Mac, after a purchase or a restore through the App Store.</li>
+    </ul>
+    <p>This information stays on your device. It is not transmitted to the developer.</p>
 
-  <h2>Safari extension and Share extension</h2>
-  <p>The optional Safari extension and Share extension exist only to send a link you chose to Nimbus on the same Mac. They do not send browsing history to the developer, and they do not open a developer-operated service.</p>
+    <h2>Safari extension and Share extension</h2>
+    <p>The optional Safari extension and Share extension exist only to send a link you chose to Nimbus on the same Mac. They do not send browsing history to the developer, and they do not open a developer-operated service.</p>
 
-  <h2>In-app purchases</h2>
-  <p>Nimbus offers an optional one-time, non-consumable in-app purchase called Nimbus Pro. Purchases are processed by Apple through the App Store. Nimbus does not receive your payment card details, Apple ID password, or billing address. The developer does not operate a payment server.</p>
+    <h2>In-app purchases</h2>
+    <p>Nimbus offers an optional one-time, non-consumable in-app purchase called Nimbus Pro. Purchases are processed by Apple through the App Store. Nimbus does not receive your payment card details, Apple ID password, or billing address. The developer does not operate a payment server.</p>
 
-  <h2>Network use</h2>
-  <p>Nimbus makes network requests only to:</p>
-  <ul>
-    <li>The HTTP or HTTPS URLs you add, including links you send from the Safari extension or the Share extension. Those requests go directly to the servers you chose, so the file can be downloaded to your Mac.</li>
-    <li>Apple’s App Store and StoreKit services, and only when you buy or restore Nimbus Pro. That communication is between your device and Apple, under Apple’s policies.</li>
-  </ul>
-  <p>Nimbus does not contact a developer server. It does not make network requests to analytics, advertising, crash-reporting, or any other third-party service.</p>
+    <h2>Network use</h2>
+    <p>Nimbus makes network requests only to:</p>
+    <ul>
+      <li>The HTTP or HTTPS URLs you add, including links you send from the Safari extension or the Share extension. Those requests go directly to the servers you chose, so the file can be downloaded to your Mac.</li>
+      <li>Apple’s App Store and StoreKit services, and only when you buy or restore Nimbus Pro. That communication is between your device and Apple, under Apple’s policies.</li>
+    </ul>
+    <p>Nimbus does not contact a developer server. It does not make network requests to analytics, advertising, crash-reporting, or any other third-party service.</p>
 
-  <h2>Children</h2>
-  <p>Nimbus does not collect personal data from anyone, including children. It is not directed at children under 13.</p>
+    <h2>Children</h2>
+    <p>Nimbus does not collect personal data from anyone, including children. It is not directed at children under 13.</p>
 
-  <h2>Changes</h2>
-  <p>If this policy changes, the updated text will be posted on this page with a new “Last updated” date. Nimbus will not begin collecting personal data without an updated policy and, where required, an updated App Store privacy label.</p>
+    <h2>How long information stays, and how to remove it</h2>
+    <p>Information Nimbus keeps is stored on your Mac, as described above, and it stays there until it is removed. Nimbus does not send that information to the developer, so there is no copy on a developer server to return or delete.</p>
+    <p>Nimbus does not ask you to create an account, and it does not ask you to join a data-collection program. You can remove what is on your Mac yourself:</p>
+    <ul>
+      <li>Downloaded files stay in the folder you chose. Delete them in Finder when you no longer want them. Removing Nimbus does not delete those files.</li>
+      <li>Settings, queues, scheduler times, daily-quota preferences, resume state, and the local record of whether Nimbus Pro is unlocked are kept by the app on that Mac. Deleting the Nimbus app is the usual way to remove those items. macOS may leave some app files in place after the app is moved to the Trash. Your purchase, if you made one, stays with your Apple Account, and you can restore it from the unlock sheet if you install Nimbus again.</li>
+      <li>Folder access outside Downloads exists only for folders you selected. Choose a different folder in Nimbus when you no longer want to use that location.</li>
+      <li>Turn the Safari extension off in Safari Settings, under Extensions. The Share extension runs only when you share a link to Nimbus.</li>
+    </ul>
+    <p>To ask a privacy question, or to ask for help removing data stored on your Mac, email <a href="mailto:amroqazzaz@gmail.com">amroqazzaz@gmail.com</a>. Please do not send downloaded files unless you have already agreed to do so.</p>
 
-  <h2>Contact</h2>
-  <p>Questions about this policy or about Nimbus can be sent to <a href="mailto:amroqazzaz@gmail.com">amroqazzaz@gmail.com</a>.</p>
-  <footer>
-    <p>Developer: Amr Ali.</p>
+    <h2>Changes</h2>
+    <p>If this policy changes, the updated text will be posted on this page with a new “Last updated” date. Nimbus will not begin collecting personal data without an updated policy and, where required, an updated App Store privacy label.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy or about Nimbus can be sent to <a href="mailto:amroqazzaz@gmail.com">amroqazzaz@gmail.com</a>.</p>
+  </main>
+  <footer class="site-footer">
+    <div class="inner">
+      <p>Developer: Amr Ali. Questions: <a href="mailto:amroqazzaz@gmail.com">amroqazzaz@gmail.com</a>.</p>
+      <p><a href="index.html">Nimbus</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a></p>
+    </div>
   </footer>
 </body>
 </html>
