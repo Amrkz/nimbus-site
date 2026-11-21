@@ -1,75 +1,60 @@
-/* Shared look for the Nimbus pages.
-   Light and dark colors are both set on purpose, so text does not
-   depend on the browser guessing a background. */
+/* Nimbus support pages. Warm card on a dark sky, same layout idea as
+   Focus Ring's support site, with Nimbus colors. Light and dark text
+   colors are set on purpose so nothing depends on the browser guessing. */
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/atkinson-hyperlegible-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/atkinson-hyperlegible-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  font-style: normal;
+  font-weight: 640;
+  font-display: swap;
+  src: url("fonts/bricolage-grotesque-640.woff2") format("woff2");
+}
 
 :root {
-  color-scheme: light dark;
-  --bg: #f6f7f9;
-  --text: #1c1c1e;
-  --muted: #4c4c52;
-  --border: #e1e3e8;
-  --link: #004a99;
-  --link-hover: #00356e;
+  --sky: #101820;
+  --glow: #16324f;
+  --cloud: #f5f8fb;
+  --ink: #15202b;
+  --quiet: #4e5d6b;
   --accent: #0a6bc4;
+  --accent-hover: #07589f;
+  --line: #d5dee8;
   --chip: #e7f1fb;
   --chip-border: #c5ddf5;
-  --hover: #eceef2;
-  --focus: #004a99;
-  --header: rgba(246, 247, 249, 0.92);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #101114;
-    --text: #f5f5f7;
-    --muted: #c8c8cd;
-    --border: #34343a;
-    --link: #9ccfff;
-    --link-hover: #d4ebff;
-    --accent: #6cb6ff;
-    --chip: #1a3146;
-    --chip-border: #2d5274;
-    --hover: #22242b;
-    --focus: #9ccfff;
-    --header: rgba(16, 17, 20, 0.92);
-  }
-}
-
-@media (forced-colors: active) {
-  :root {
-    --bg: Canvas;
-    --text: CanvasText;
-    --muted: CanvasText;
-    --border: CanvasText;
-    --link: LinkText;
-    --link-hover: LinkText;
-    --accent: LinkText;
-    --chip: Canvas;
-    --chip-border: CanvasText;
-    --hover: Canvas;
-    --focus: Highlight;
-    --header: Canvas;
-  }
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 html {
-  background: var(--bg);
-  color: var(--text);
+  background: var(--sky);
+  color: var(--cloud);
 }
 
 body {
   margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(1200px 480px at 50% -10%, var(--glow) 0%, transparent 55%),
+    var(--sky);
+  font-family: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
   font-size: 1.0625rem;
-  line-height: 1.6;
+  line-height: 1.55;
   text-rendering: optimizeLegibility;
 }
 
@@ -78,216 +63,160 @@ body {
   left: 1rem;
   top: 0;
   transform: translateY(-120%);
-  background: var(--bg);
-  color: var(--text);
-  border: 2px solid var(--focus);
+  background: var(--cloud);
+  color: var(--ink);
+  border: 2px solid var(--accent);
   border-radius: 0.5rem;
   padding: 0.6rem 0.9rem;
   z-index: 5;
 }
 
-.skip:focus {
-  transform: none;
-}
+.skip:focus { transform: none; }
 
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  background: var(--header);
-  border-top: 3px solid var(--accent);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(12px);
-}
-
-.inner,
 main {
-  width: min(44rem, 100%);
-  margin-inline: auto;
-  padding-left: max(1.25rem, env(safe-area-inset-left));
-  padding-right: max(1.25rem, env(safe-area-inset-right));
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 1.75rem 1rem 3rem;
 }
 
-.site-header .inner {
+article {
+  background: var(--cloud);
+  border-radius: 28px;
+  padding: 1.75rem 1.5rem 1.35rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+}
+
+.page-head {
   display: flex;
-  flex-wrap: wrap;
+  gap: 1rem;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.25rem 1rem;
-  padding-top: 0.35rem;
-  padding-bottom: 0.35rem;
-}
-
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  min-height: 44px;
-  color: var(--text);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  text-decoration: none;
-}
-
-.brand:hover {
-  color: var(--text);
 }
 
 .mark {
-  width: 1.65rem;
-  height: 1.65rem;
-  display: block;
+  width: 76px;
+  height: 76px;
   flex: none;
+  display: block;
 }
 
-nav ul {
+h1 {
+  margin: 0;
+  font-family: "Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  font-weight: 640;
+  font-size: clamp(2rem, 6vw, 2.6rem);
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+}
+
+h2 {
+  margin: 1.85rem 0 0.45rem;
+  font-family: "Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  font-weight: 640;
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  margin: 1.15rem 0 0.25rem;
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+
+p, li { margin: 0.35rem 0; }
+
+.lead {
+  margin: 1rem 0 0;
+  color: var(--quiet);
+  max-width: 38rem;
+}
+
+.meta {
+  color: var(--quiet);
+  font-size: 0.875rem;
+  margin: 0.65rem 0 1rem;
+}
+
+ul, ol {
+  margin: 0.4rem 0 0;
+  padding-left: 1.25rem;
+}
+
+li { margin: 0.4rem 0; }
+
+a {
+  color: var(--accent);
+  text-underline-offset: 0.16em;
+}
+
+a:hover { color: var(--accent-hover); }
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+nav.pages {
+  margin: 1rem 0 0;
+}
+
+nav.pages ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.15rem;
+  gap: 0.15rem 0.25rem;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-nav a {
+nav.pages a {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
   min-height: 44px;
-  padding: 0.35rem 0.75rem;
+  padding: 0.25rem 0.7rem;
   border-radius: 999px;
-  color: var(--text);
+  color: var(--ink);
   text-decoration: none;
 }
 
-nav a:hover {
-  background: var(--hover);
-  color: var(--text);
-}
+nav.pages a:hover { background: var(--chip); }
 
-nav a[aria-current="page"] {
+nav.pages a[aria-current="page"] {
   background: var(--chip);
   box-shadow: inset 0 0 0 1px var(--chip-border);
-  font-weight: 650;
-}
-
-main {
-  padding-top: 2.15rem;
-  padding-bottom: 3rem;
-}
-
-main:focus {
-  outline: none;
-}
-
-h1 {
-  margin: 0 0 0.75rem;
-  font-size: clamp(1.85rem, 3vw, 2.2rem);
-  line-height: 1.15;
-  letter-spacing: -0.025em;
   font-weight: 700;
 }
 
-h2 {
-  margin: 2.2rem 0 0.55rem;
-  font-size: 1.22rem;
-  line-height: 1.3;
-  letter-spacing: -0.015em;
-  font-weight: 650;
-}
-
-p,
-li {
-  overflow-wrap: break-word;
-}
-
-p {
-  margin: 0.75rem 0;
-}
-
-ul {
-  margin: 0.75rem 0;
-  padding-left: 1.25rem;
-}
-
-li + li {
-  margin-top: 0.4rem;
-}
-
-.muted {
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-a {
-  color: var(--link);
-  text-underline-offset: 0.16em;
-}
-
-a:visited {
-  color: var(--link);
-}
-
-a:hover {
-  color: var(--link-hover);
-}
-
 .callout {
-  margin: 1.1rem 0 0.25rem;
+  margin: 0.9rem 0 0.25rem;
   padding: 0.9rem 1rem;
   background: var(--chip);
   border: 1px solid var(--chip-border);
   border-radius: 0.8rem;
 }
 
-.site-footer {
-  border-top: 1px solid var(--border);
-  color: var(--muted);
-  font-size: 0.95rem;
+footer.card-foot {
+  margin-top: 1.75rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+  color: var(--quiet);
+  font-size: 0.92rem;
 }
 
-.site-footer .inner {
-  padding-top: 1.15rem;
-  padding-bottom: calc(2rem + env(safe-area-inset-bottom));
-}
+footer.card-foot p { margin: 0.35rem 0; }
 
-.site-footer p {
-  margin: 0.4rem 0;
-}
-
-:focus-visible {
-  outline: 3px solid var(--focus);
-  outline-offset: 3px;
-}
-
-@media (max-width: 420px) {
-  .site-header .inner {
-    align-items: flex-start;
-  }
-
-  nav a {
-    padding-inline: 0.6rem;
-  }
+@media (max-width: 520px) {
+  article { border-radius: 22px; padding: 1.35rem 1.1rem 1.1rem; }
+  .page-head { align-items: flex-start; }
+  .mark { width: 64px; height: 64px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
+  html { scroll-behavior: auto; }
 }
 
 @media print {
-  .site-header {
-    position: static;
-    background: #fff;
-  }
-
-  body {
-    background: #fff;
-    color: #000;
-  }
-
-  a {
-    color: #000;
-  }
+  html, body { background: #fff; color: #000; }
+  article { box-shadow: none; border: 1px solid #ccc; }
+  a { color: #000; }
 }

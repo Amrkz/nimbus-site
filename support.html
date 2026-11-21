@@ -3,86 +3,92 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="color-scheme" content="light dark">
-  <meta name="description" content="Help for Nimbus, a Mac download manager. How downloads, queues, and Nimbus Pro work, and how to contact the developer.">
-  <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#101114" media="(prefers-color-scheme: dark)">
-  <title>Support — Nimbus</title>
+  <meta name="robots" content="index,follow">
+    <meta name="description" content="Help for Nimbus Download Manager on Mac. How to add a link, use the Safari and Share extensions, restore a purchase, or manage the Yearly plan.">
+  <title>Nimbus Support</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
-  <header class="site-header">
-    <div class="inner">
-      <a class="brand" href="index.html">
+  <main id="content" tabindex="-1">
+    <article>
+      <header class="page-head">
         <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
           <rect width="32" height="32" rx="8" fill="#0a6bc4"/>
           <path fill="#ffffff" d="M8.6 21.4h14.1a4.55 4.55 0 0 0 .4-9.08 5.7 5.7 0 0 0-10.9-1.35A3.85 3.85 0 0 0 8.6 21.4z"/>
         </svg>
-        <span>Nimbus</span>
-      </a>
-      <nav aria-label="Pages">
+        <h1>Nimbus Support</h1>
+      </header>
+      <nav class="pages" aria-label="Pages">
         <ul>
           <li><a href="index.html">Nimbus</a></li>
           <li><a href="support.html" aria-current="page">Support</a></li>
           <li><a href="privacy.html">Privacy</a></li>
         </ul>
       </nav>
-    </div>
-  </header>
-  <main id="content" tabindex="-1">
-    <h1>Support</h1>
-    <p>Nimbus is a download manager for Mac. It downloads files over HTTP and HTTPS from links you provide, and it keeps those files on your computer.</p>
-    <p class="callout">Questions, feedback, and feature requests: <a href="mailto:amroqazzaz@gmail.com">amroqazzaz@gmail.com</a>.</p>
 
-    <h2>System requirements</h2>
-    <p>Nimbus requires macOS 13 or later.</p>
+      <p class="lead">Help for Nimbus Download Manager on Mac. This page needs no account. Nimbus requires macOS 13 or later.</p>
 
-    <h2>How to download a file</h2>
-    <ul>
-      <li>Open Nimbus and paste a direct HTTP or HTTPS link, or drop a list of links onto the window.</li>
-      <li>Or, in Safari, use the Nimbus extension, or share a link to Nimbus from the Share sheet in Safari or other apps.</li>
-      <li>Choose a destination: your Downloads folder, or a folder you pick.</li>
-      <li>Start the transfer. You can pause and resume, including after you quit Nimbus or restart your Mac.</li>
-    </ul>
-    <p>When a server supports HTTP Range requests, Nimbus can split a file across several connections to finish sooner. If the server does not support ranges, Nimbus falls back to a normal single-connection download.</p>
+      <h2>Contact</h2>
+      <p class="callout">Email <!--email_off--><a href="mailto:amroqazzaz@gmail.com">amroqazzaz@gmail.com</a><!--/email_off-->. We usually reply within two business days. Include your macOS version, the Nimbus version, and a short description of the problem. Do not include passwords or payment information, and please do not send confidential files unless you have already agreed to do so.</p>
 
-    <h2>Queues, schedule, and daily quota</h2>
-    <ul>
-      <li>Queues let you line up several files and control how many run at once.</li>
-      <li>The scheduler can start or stop queues at times you set.</li>
-      <li>An optional daily quota caps how much is downloaded in a day.</li>
-    </ul>
-    <p>Progress is also available from the menu bar, so you do not have to keep the main window open.</p>
+      <h2>Frequently asked questions</h2>
 
-    <h2>Nimbus Pro</h2>
-    <p>Nimbus Pro is an optional one-time in-app purchase. There is no subscription. Buy or restore it from the unlock sheet in the app. Purchases are handled by Apple through the App Store. If you reinstall Nimbus or move to another Mac signed in with the same Apple Account, use Restore Purchases.</p>
+      <h3>How do I add a link?</h3>
+      <p>Open Nimbus and paste an HTTP, HTTPS, or FTP link, or drop a list of links onto the window. You can also choose <strong>File → Add Download…</strong>. Pick a destination, then start the transfer.</p>
+      <p>When a server supports HTTP Range requests, Nimbus can split a file across several connections to finish sooner. If the server does not support ranges, Nimbus uses a single connection.</p>
 
-    <h2>What this App Store edition does not do</h2>
-    <p>Nimbus downloads direct HTTP and HTTPS files only. It does not download videos from YouTube or other media sites, it does not grab or copy entire websites, and it does not download torrents or magnet links. It is not a web browser.</p>
+      <h3>How do I use the Safari extension?</h3>
+      <p>Turn the Nimbus extension on in Safari Settings, under Extensions. It sends a link you chose to Nimbus on the same Mac.</p>
 
-    <h2>If something does not behave as expected</h2>
-    <ul>
-      <li>A file downloads with one connection when the server does not support HTTP Range requests. Several connections are used only when the server allows them.</li>
-      <li>Pause and resume, including after you quit Nimbus or restart your Mac, applies to a transfer you already started.</li>
-      <li>If Nimbus cannot save outside your Downloads folder, choose the folder again. Access to other folders is granted only when you select them.</li>
-      <li>To use the Safari extension, turn it on in Safari Settings, under Extensions. It sends a link you chose to Nimbus on the same Mac.</li>
-      <li>If Nimbus Pro looks locked after you reinstall Nimbus or use another Mac, open the unlock sheet and use Restore Purchases with the same Apple Account.</li>
-    </ul>
+      <h3>How do I use the Share extension?</h3>
+      <p>In Safari or another app, open the Share sheet and choose Nimbus. The link is sent to Nimbus on the same Mac.</p>
 
-    <h2>Privacy</h2>
-    <p>Downloads go directly from the servers you specify to your Mac. Nimbus does not create an account and does not collect personal data. For the full policy, see the <a href="privacy.html">Privacy Policy</a>.</p>
+      <h3>How do I pause and resume a download?</h3>
+      <p>Pause a transfer in the Nimbus window, from the menu bar icon, or with <strong>Downloads → Pause</strong>. You can resume it later, including after you quit Nimbus or restart your Mac, as long as the transfer was already started.</p>
 
-    <h2>Contact</h2>
-    <p>If something does not work as expected, email <a href="mailto:amroqazzaz@gmail.com">amroqazzaz@gmail.com</a> and include the macOS version, the Nimbus version, and a short description of what happened. Please do not send confidential files unless you have already agreed to do so.</p>
+      <h3>Where do files go?</h3>
+      <p>You choose the destination: your Downloads folder, or another folder you pick. If Nimbus cannot save outside Downloads, choose the folder again. Access to other folders is granted only when you select them.</p>
+
+      <h3>What does Nimbus Pro include?</h3>
+      <p>Nimbus is free to use. Accelerated downloads, pause and resume, queues, the Safari extension, and the Share menu stay free. Optional Nimbus Pro adds:</p>
+      <ul>
+        <li>Scheduler: start and stop download queues at set times and days</li>
+        <li>Overnight queues: run big downloads while you sleep, then quit Nimbus when done</li>
+        <li>Per-queue limits on how many files download at once</li>
+      </ul>
+      <p>Nimbus Pro is sold two ways. Either one unlocks Pro:</p>
+      <ul>
+        <li><strong>Lifetime</strong> — a $24.99 one-time purchase</li>
+        <li><strong>Yearly</strong> — a $9.99 auto-renewing subscription</li>
+      </ul>
+      <p>Prices are shown in the app by the App Store and may vary by region or currency.</p>
+
+      <h3>How do I restore a purchase?</h3>
+      <p>Choose <strong>Nimbus → Nimbus Pro…</strong> in the menu bar, then choose <strong>Restore Purchases</strong>. Use the same Apple Account you bought with. Nimbus has no separate account.</p>
+
+      <h3>How do I cancel the Yearly subscription?</h3>
+      <p>The Yearly plan renews automatically unless you cancel at least 24 hours before the end of the current period. Manage or cancel it in your <a href="https://apps.apple.com/account/subscriptions">Apple Account subscription settings</a>. A Lifetime purchase does not renew and does not need to be cancelled.</p>
+
+      <h3>The purchase didn’t complete.</h3>
+      <p>Check your internet connection and that you’re signed in to the App Store, then try again. If you were charged but Pro is still locked, use <strong>Restore Purchases</strong>.</p>
+
+      <h3>Is my data collected?</h3>
+      <p>No. Nimbus does not collect personal data, and it does not create an account or use analytics. Downloads stay on your Mac. Purchases are handled by Apple through StoreKit. Read the <a href="privacy.html">Privacy Policy</a>.</p>
+
+      <h2>Nimbus Pro payments</h2>
+      <p>Payment is charged to your Apple Account. The Yearly subscription renews automatically unless cancelled at least 24 hours before the end of the period. Manage or cancel the subscription in your Apple Account subscription settings. Use Restore Purchases in the app to restore a Lifetime purchase or an active Yearly subscription on another Mac signed in with the same Apple Account.</p>
+
+      <h2>Terms of Use</h2>
+      <p>Nimbus uses the <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard End User License Agreement (EULA)</a>.</p>
+
+      <footer class="card-foot">
+        <p>Nimbus Download Manager for macOS · Developer: Amr Ali</p>
+        <p>Questions: <!--email_off--><a href="mailto:amroqazzaz@gmail.com">amroqazzaz@gmail.com</a><!--/email_off--> · <a href="index.html">Nimbus</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a></p>
+      </footer>
+    </article>
   </main>
-  <footer class="site-footer">
-    <div class="inner">
-      <p>Developer: Amr Ali. Questions: <a href="mailto:amroqazzaz@gmail.com">amroqazzaz@gmail.com</a>.</p>
-      <p><a href="index.html">Nimbus</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a></p>
-    </div>
-  </footer>
 </body>
 </html>
